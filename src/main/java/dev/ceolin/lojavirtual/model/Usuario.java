@@ -50,7 +50,7 @@ public class Usuario implements UserDetails{
 	
 	
 	@Temporal(TemporalType.DATE)
-	private Date dataAtualSenha; 
+	private Date dataAtualSenha;  
 	
 	/*Autoridades = Sao os acesso, ou seja Role_Admin, Role_Financeiro, Role_Secretario*/
 	@Override
