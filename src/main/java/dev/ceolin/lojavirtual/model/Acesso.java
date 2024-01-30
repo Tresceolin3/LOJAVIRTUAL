@@ -28,8 +28,8 @@ public class Acesso implements GrantedAuthority {
 
 	@Override
 	public String getAuthority() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return this.descricao;
 	}
 
 	public Long getId() {
