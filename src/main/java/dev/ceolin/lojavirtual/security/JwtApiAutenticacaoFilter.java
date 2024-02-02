@@ -14,21 +14,27 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.GenericFilterBean;
 
 /*Filtro das requisoes que serao capturadas para autenticacao*/
-public class JwtApiAutenticacaoFilter extends GenericFilterBean{
+public class JwtApiAutenticacaoFilter extends GenericFilterBean {
 
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-		/*Autenticacao do user*/
-		
-		Authentication authentication = new JWTTokenAutenticacaoService().
-				getAuthetication((HttpServletRequest) request, (HttpServletResponse) response);
-		
-		/*Processo de autenticacao do spring security*/
-		SecurityContextHolder.getContext().setAuthentication(authentication);
-		
-		chain.doFilter(request, response);
-		
+		/* Autenticacao do user */
+
+		try {
+
+			Authentication authentication = new JWTTokenAutenticacaoService()
+					.getAuthetication((HttpServletRequest) request, (HttpServletResponse) response);
+
+			/* Processo de autenticacao do spring security */
+			SecurityContextHolder.getContext().setAuthentication(authentication);
+
+			chain.doFilter(request, response);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			response.getWriter().write("Ocorreu um erro no sistema, avise ao administrador: \n" +e.getMessage());
+		}
 	}
 
 }

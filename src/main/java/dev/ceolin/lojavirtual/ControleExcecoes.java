@@ -20,6 +20,17 @@ import dev.ceolin.lojavirtual.model.dto.ObjetoErrorDTO;
 @RestControllerAdvice
 @ControllerAdvice
 public class ControleExcecoes extends ResponseEntityExceptionHandler {
+	
+	@ExceptionHandler(ExceptionDevJava.class)
+	public ResponseEntity<Object> handleExceptionCustom(ExceptionDevJava exceptionDevJava){
+		ObjetoErrorDTO objetoErrorDTO = new ObjetoErrorDTO();
+		
+		objetoErrorDTO.setError(exceptionDevJava.getMessage());
+		objetoErrorDTO.setCode(HttpStatus.OK.toString());
+		
+		return new ResponseEntity<Object>(objetoErrorDTO, HttpStatus.OK);
+	}
+	
 
 	/* captura execoes */
 	@ExceptionHandler({ Exception.class, RuntimeException.class, Throwable.class })

@@ -37,7 +37,7 @@ public class LojavirtualApplicationTests extends TestCase {
 	private WebApplicationContext wac;
 
 	@Test
-	public void testCadastraAcesso() {
+	public void testCadastraAcesso() throws ExceptionDevJava {
 
 		Acesso acesso = new Acesso();
 

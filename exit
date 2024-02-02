@@ -1,0 +1,101 @@
+[33mcommit 3f1445dabc6cbb8a646e4ef694c9ace7860b7ffb[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Gabriel Ceolin <71522277+Tresceolin3@users.noreply.github.com>
+Date:   Thu Feb 1 16:02:29 2024 -0400
+
+    Create README.md
+
+[33mcommit aa3d1d9af1674ede9e668af0a8441bda86eb63e3[m
+Author: Gabriel Ceolin <Gabriel Ceolin@DESKTOP-5U1SMEH.mshome.net>
+Date:   Thu Feb 1 15:58:43 2024 -0400
+
+    Spring Security e JWT com Exceções
+
+[33mcommit df48ed166b8d139c77e735e6fd5fdaca8fe8a336[m
+Author: Gabriel Ceolin <Gabriel Ceolin@DESKTOP-5U1SMEH.mshome.net>
+Date:   Thu Feb 1 14:43:16 2024 -0400
+
+    Config Spring Security e JWT
+
+[33mcommit 4490e913769ca3c9bc3bb4e6abcb272b39fbf0ee[m
+Author: Gabriel Ceolin <Gabriel Ceolin@DESKTOP-5U1SMEH.mshome.net>
+Date:   Thu Feb 1 09:38:26 2024 -0400
+
+    Configurando Spring Security e JWT
+
+[33mcommit cb24edf34918248bf4a3604d7527ddb883dcee63[m
+Author: Gabriel Ceolin <Gabriel Ceolin@DESKTOP-5U1SMEH>
+Date:   Wed Jan 31 10:25:25 2024 -0400
+
+    Implementacao de versionamento usando FLYway
+
+[33mcommit 78719e473859e97899ae9d5e8e475c5e8587a343[m
+Author: Gabriel Ceolin <Gabriel Ceolin@DESKTOP-5U1SMEH>
+Date:   Tue Jan 30 15:40:35 2024 -0400
+
+    Teste API com Junit
+
+[33mcommit a38dae2dc268d128a9d99fbf27135d06f7716a8f[m
+Author: Gabriel Ceolin <Gabriel Ceolin@DESKTOP-5U1SMEH>
+Date:   Tue Jan 30 11:36:01 2024 -0400
+
+    End-Point e teste com junit
+
+[33mcommit a16c88f8263f5e9aa9750b3be28d9475ebc2b7f0[m
+Author: Gabriel Ceolin <Gabriel Ceolin@DESKTOP-5U1SMEH.mshome.net>
+Date:   Mon Jan 29 09:37:54 2024 -0400
+
+    revisao e insercao de todas as classes
+
+[33mcommit e17d7a5d42f932c22b2166791b81821c73040ff6[m
+Author: Gabriel Ceolin <Gabriel Ceolin@DESKTOP-5U1SMEH>
+Date:   Sun Jan 28 09:37:57 2024 -0400
+
+    implementacao de todas classes
+
+[33mcommit c9f9c40b6e399d14d2412af8b2431854764ce87a[m
+Author: Gabriel Ceolin <Gabriel Ceolin@DESKTOP-5U1SMEH.mshome.net>
+Date:   Fri Jan 26 14:31:07 2024 -0400
+
+    implementacao de classes
+
+[33mcommit f7719d37b35768c60ce8c661430f71ec5d5ce7ac[m
+Author: Gabriel Ceolin <Gabriel Ceolin@DESKTOP-5U1SMEH.mshome.net>
+Date:   Fri Jan 26 10:29:10 2024 -0400
+
+    implementaçoes de novas classes
+
+[33mcommit 8b5ab47b6ffca33c6c4a987950452b4def1c1a0f[m
+Author: Gabriel Ceolin <Gabriel Ceolin@DESKTOP-5U1SMEH.mshome.net>
+Date:   Thu Jan 25 15:53:01 2024 -0400
+
+    criacao usuario_acesso
+
+[33mcommit 157e2552671071e6911813da3e57e927197fe306[m
+Author: Gabriel Ceolin <Gabriel Ceolin@DESKTOP-5U1SMEH.mshome.net>
+Date:   Thu Jan 25 13:36:30 2024 -0400
+
+    implements class
+
+[33mcommit 9b84cee127fb34a8463fcc7db132e283c011fc1a[m
+Author: Gabriel Ceolin <Gabriel Ceolin@DESKTOP-5U1SMEH.mshome.net>
+Date:   Wed Jan 24 16:39:31 2024 -0400
+
+    add class acesso and Pessoa
+
+[33mcommit e123efb81c9948a53ef414a2dc5b25716d5e8c28[m
+Author: Gabriel Ceolin <Gabriel Ceolin@DESKTOP-5U1SMEH.mshome.net>
+Date:   Wed Jan 24 15:59:47 2024 -0400
+
+    commit classe categoria produto
+
+[33mcommit c0f6f80b779d51cd894ef412b8f0394695746c4a[m
+Author: Gabriel Ceolin <Gabriel Ceolin@DESKTOP-5U1SMEH.mshome.net>
+Date:   Wed Jan 24 15:42:28 2024 -0400
+
+    classe marca produto e pow xml
+
+[33mcommit 00020e90d680b6f5e4df9fb36ca0f8afc5dca160[m
+Author: Gabriel Ceolin <Gabriel Ceolin@DESKTOP-5U1SMEH.mshome.net>
+Date:   Wed Jan 24 14:52:06 2024 -0400
+
+    primeiro commit projeto loja virtual
