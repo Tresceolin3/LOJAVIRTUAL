@@ -1,10 +1,12 @@
 package dev.ceolin.lojavirtual;
 
+import java.util.Calendar;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Profile;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -21,6 +23,7 @@ import dev.ceolin.lojavirtual.model.Acesso;
 import dev.ceolin.lojavirtual.repository.AcessoRepository;
 import junit.framework.TestCase;
 
+@Profile("teste")
 @SpringBootTest(classes = LojavirtualApplication.class)
 public class LojavirtualApplicationTests extends TestCase {
 
@@ -40,8 +43,10 @@ public class LojavirtualApplicationTests extends TestCase {
 	public void testCadastraAcesso() throws ExceptionDevJava {
 
 		Acesso acesso = new Acesso();
+		
+		String desacesso = "ROLE_ADMIN" + Calendar.getInstance().getTimeInMillis();
 
-		acesso.setDescricao("ROLE_ADMIN");
+		acesso.setDescricao(desacesso);
 
 		assertEquals(true, acesso.getId() == null);
 
@@ -51,7 +56,7 @@ public class LojavirtualApplicationTests extends TestCase {
 		assertEquals(true, acesso.getId() > 0);
 
 		/* Valida dados salvos da forma correta */
-		assertEquals("ROLE_ADMIN", acesso.getDescricao());
+		assertEquals(desacesso, acesso.getDescricao());
 
 		/* Teste de carregamento */
 
@@ -94,7 +99,7 @@ public class LojavirtualApplicationTests extends TestCase {
 
 		Acesso acesso = new Acesso();
 
-		acesso.setDescricao("ROLE_COMPRADOR");
+		acesso.setDescricao("ROLE_COMPRADOR" + Calendar.getInstance().getTimeInMillis());
 
 		ObjectMapper objectMapper = new ObjectMapper();
 
@@ -237,5 +242,7 @@ public class LojavirtualApplicationTests extends TestCase {
 	    acessoRepository.deleteById(acesso.getId());
 	    
 	}
+	
+	
 	
 }
