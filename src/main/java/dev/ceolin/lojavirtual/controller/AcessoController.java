@@ -18,7 +18,7 @@ import dev.ceolin.lojavirtual.ExceptionDevJava;
 import dev.ceolin.lojavirtual.model.Acesso;
 import dev.ceolin.lojavirtual.repository.AcessoRepository;
 import dev.ceolin.lojavirtual.service.AcessoService;
-//testando commit github
+
 @Controller
 @RestController
 public class AcessoController {

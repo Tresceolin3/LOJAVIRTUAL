@@ -91,6 +91,7 @@ public class LojavirtualApplicationTests extends TestCase {
 	}
 
 	/* Teste do end point salvar acesso */
+	
 	@Test
 	public void testRestApiCadastroAcesso() throws JsonProcessingException, Exception {
 
@@ -99,7 +100,7 @@ public class LojavirtualApplicationTests extends TestCase {
 
 		Acesso acesso = new Acesso();
 
-		acesso.setDescricao("ROLE_COMPRADOR" + Calendar.getInstance().getTimeInMillis());
+		acesso.setDescricao("ROLE_USER" + Calendar.getInstance().getTimeInMillis());
 
 		ObjectMapper objectMapper = new ObjectMapper();
 
@@ -242,7 +243,6 @@ public class LojavirtualApplicationTests extends TestCase {
 	    acessoRepository.deleteById(acesso.getId());
 	    
 	}
-	
 	
 	
 }

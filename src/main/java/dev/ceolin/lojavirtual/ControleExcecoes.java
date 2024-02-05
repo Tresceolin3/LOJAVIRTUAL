@@ -7,6 +7,7 @@ import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -20,17 +21,16 @@ import dev.ceolin.lojavirtual.model.dto.ObjetoErrorDTO;
 @RestControllerAdvice
 @ControllerAdvice
 public class ControleExcecoes extends ResponseEntityExceptionHandler {
-	
+
 	@ExceptionHandler(ExceptionDevJava.class)
-	public ResponseEntity<Object> handleExceptionCustom(ExceptionDevJava exceptionDevJava){
+	public ResponseEntity<Object> handleExceptionCustom(ExceptionDevJava exceptionDevJava) {
 		ObjetoErrorDTO objetoErrorDTO = new ObjetoErrorDTO();
-		
+
 		objetoErrorDTO.setError(exceptionDevJava.getMessage());
 		objetoErrorDTO.setCode(HttpStatus.OK.toString());
-		
+
 		return new ResponseEntity<Object>(objetoErrorDTO, HttpStatus.OK);
 	}
-	
 
 	/* captura execoes */
 	@ExceptionHandler({ Exception.class, RuntimeException.class, Throwable.class })
@@ -47,6 +47,9 @@ public class ControleExcecoes extends ResponseEntityExceptionHandler {
 			for (ObjectError objectError : list) {
 				msg += objectError.getDefaultMessage() + "\n";
 			}
+		}
+		if (ex instanceof HttpMessageNotReadableException) {
+				msg = "Nao esta sendo enviado dados para o BODY corpo da resquisao";
 		} else {
 			msg = ex.getMessage();
 		}

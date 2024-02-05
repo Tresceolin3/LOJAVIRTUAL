@@ -1,39 +1,39 @@
 package dev.ceolin.lojavirtual;
 
+import java.util.Calendar;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Profile;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import dev.ceolin.lojavirtual.controller.PessoaController;
 import dev.ceolin.lojavirtual.model.PessoaJuridica;
-import dev.ceolin.lojavirtual.repository.PessoaRepository;
-import dev.ceolin.lojavirtual.service.PessoaUserService;
 import junit.framework.TestCase;
 
 @Profile("teste")
 @SpringBootTest(classes = LojavirtualApplication.class)
 public class TestePessoaUsuario extends TestCase {
-
+	
 	@Autowired
-	private PessoaUserService pessoaUserService;
-
-	@Autowired
-	private PessoaRepository pessoaRepository;
+	private PessoaController pessoaController;
+	
 
 	@Test
-	public void testCadPessoa() {
+	public void testCadPessoa() throws ExceptionDevJava{
 
 		PessoaJuridica pessoaJuridica = new PessoaJuridica();
-		pessoaJuridica.setCnpj("12399000190");
+		pessoaJuridica.setCnpj(" "+ Calendar.getInstance().getTimeInMillis());
 		pessoaJuridica.setNome("Gabriel");
-		pessoaJuridica.setEmail("gabriel@gmail.com");
+		pessoaJuridica.setEmail("testesLevisk@gmail.com");
 		pessoaJuridica.setTelefone("67912391293");
 		pessoaJuridica.setInscEstadual("1212312312312");
 		pessoaJuridica.setInscMunicipal("12312897391273");
 		pessoaJuridica.setNomeFantasia("MonkeyFruta");
 		pessoaJuridica.setRazaoSocial("1231231223");
 
-		pessoaRepository.save(pessoaJuridica);
+		pessoaController.salvarPj(pessoaJuridica);
 
 		/*
 		 * PessoaFisica pessoaFisica = new PessoaFisica();
@@ -45,6 +45,7 @@ public class TestePessoaUsuario extends TestCase {
 		 * pessoaFisica.setEmpresa(pessoaFisica);
 		 * 
 		 */
+		//System.out.println(new BCryptPasswordEncoder().encode("123"));
 
 	}
 
